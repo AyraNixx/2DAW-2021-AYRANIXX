@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ej. 5: Suma y Producto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!--Indicamos el tipo de lenguaje-->
+        <script language="JavaScript">
+            //Definimos las variables
+            let num1, num2, num3, num4;
+            let suma;
+            let producto;
+            //Usamos promt para cargar por teclado el valor de los numeros
+            num1 = prompt("Primer número: ");
+            num2 = prompt("Segundo número: ");
+            num3 = prompt("Tercer número: ");
+            num4 = prompt("Cuarto número: ");
+            //Calculamos la suma de los dos primeros y el producto de los dos últimos
+            //Utilizamos la funcion parseInt para concertir los argumentos a enteros
+            //porque sino en la suma los trata como si fuera una cadena y concatena los 
+            //valores
+            suma = parseInt(num1) + parseInt(num2);
+            producto = parseInt(num3) * parseInt(num4);
+            //Con document.write mostramos los datos en la página HTML
+            document.write("Suma: " + suma);
+            document.write("<br>");
+            document.write("Producto: " + producto);
+        </script>
+    </body>
+</html>
+
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ej. 3: Usuario y correo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!--Indicamos el tipo de lenguaje-->
+        <script language="JavaScript">
+
+            let map = (op) =>{
+
+            let ciudades = new Map();
+
+            ciudades.set('Tokio', '39,4 millones');
+            ciudades.set('Cantón', '32,6 millones');
+            ciudades.set('Shanghái', '29,6 millones');
+            ciudades.set('Yakarta', '27 millones');
+            ciudades.set('Delhi', '25,3 millones');
+            ciudades.set('Seúl', '24,2 millones');
+
+            switch(op){
+                case 'ver':
+                    for(let[key, value] of ciudades){
+                        document.write(key + ' con ' + value);
+                    }
+                    break;
+            }};        
+        </script>
+    </body>
+</html>

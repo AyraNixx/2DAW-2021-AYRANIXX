@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ej. 6: Media y Clave</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!--Indicamos el tipo de lenguaje-->
+        <script language="JavaScript">
+            //Definimos las variables
+            let nota1, nota2, nota3;
+            let clave1, clave2;
+            let promedio;
+            //Usamos promt para cargar por teclado las notas y las claves
+            clave1 = prompt("Primera clave: ");
+            clave2 = prompt("Segunda clave: ");
+            nota1 = prompt("Primera nota: ");
+            nota2 = prompt("Segunda nota: ");
+            nota3 = prompt("Tercera nota: ");
+
+            //Calculamos el promedio
+            promedio = (parseInt(nota1) + parseInt(nota2) + parseInt(nota3))/3;
+
+            //Utilizamos el condicional para que en caso de que la primera clave no coincida
+            //con la segunda salga un mensaje en la página que lo indique. Si coinciden,
+            //también lo dirá
+            if(clave1 == clave2){
+                document.write("Las dos claves coinciden");
+                document.write("<br>");
+            }else{
+                document.write("Error! Las claves no son coincidentes");
+                document.write("<br>");
+            }
+
+            //Utilizamos el condicional nuevamente para ver si promocionan (la media debe de 
+            //ser mayor o igual que 7) o no 
+            if(promedio >= 7){
+                document.write("Promocionado");
+            }else{
+                document.write("No promocionado");
+            }
+        </script>
+    </body>
+</html>

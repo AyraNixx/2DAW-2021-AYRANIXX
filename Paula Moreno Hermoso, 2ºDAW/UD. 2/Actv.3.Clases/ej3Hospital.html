@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ej. 3: Hospital</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!--Indicamos el tipo de lenguaje-->
+        <script language="JavaScript">
+
+            "use strict";
+
+            //Creamos la clase Paciente
+            class Paciente
+           {
+                //Constructor de la clase Paciente
+                constructor(dni, nombre, enfermedad)
+                {
+                    //atributos de la clase Paciente
+                    this.dni = dni;
+                    this.nombre = nombre;
+                    this.enfermedad = enfermedad;
+                }
+           }
+           
+            //Creamos la clase Hospital
+           class Hospital
+           {
+               //Constructor de la clase Hospital
+               constructor(nombre, ciudad, numPacientes)
+               {
+                this.nombre = nombre;
+                this.ciudad = ciudad;
+                this.arrayPacientes = new Array();
+               
+                //Añadimos pacientes al array para guardarlos
+                    for(let i = 0; i < numPacientes; i++)
+                    {
+                        this.arrayPacientes[i] = new Paciente(i, " Paciente", " Pulmonía");
+                    }
+               }  
+               //Damos de alta al paciente
+               altaPaciente(n){
+                    //Eliminamos al paciente n del array
+                    //cambia el contenido de un array eliminando elementos 
+                    //existentes y/o agregando nuevos elementos
+                    this.arrayPacientes.splice(n, 1);
+                    alert("El paciente " + n + " ha sido dado de alta");
+               }         
+               listaPacientes()
+               {
+                   //Con Object value podemos obtener los valores de un objeto
+                    for(let i = 0; i < this.arrayPacientes.length; i++){
+                        //Sacamos el dni de los pacientes para asi ver 
+                        //que pacientes tenemos en nuestra lista
+                        document.write(this.arrayPacientes[i].dni);
+                        document.write("<br>");
+                    }
+               }  
+           }  
+
+           function main()
+           {
+               //Creamos un objeto Hospital
+                let hospital = new Hospital("Rosales", "El Puerto", 6);
+
+                //Mostramos nombre y ciudad
+                document.write(hospital.nombre);
+                document.write("<br>");
+                document.write(hospital.ciudad);
+                document.write("<br>");
+                
+                //Mostramos la lista de pacientes
+                hospital.listaPacientes();
+                //Llamamos al metodo altaPaciente para eliminar
+                //el paciente indicado
+                hospital.altaPaciente(3);
+                //Mostramos la lista nuevamente para ver si nos sigue apareciendo.
+                document.write("<br>");
+                hospital.listaPacientes();
+           }
+           main();
+        </script>
+    </body>
+</html>

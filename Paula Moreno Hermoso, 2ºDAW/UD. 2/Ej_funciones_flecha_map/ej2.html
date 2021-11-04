@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ej. 1 Funciones flecha</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script languaje = "JavaScript">
+            let num1 = prompt('Numero 1');//parseInt(document.getElementById('num1'));
+            let num2 = prompt('Numero 2');//parseInt(document.getElementById('num2'));
+            let calculadora = (signo) => {
+                let result;
+                switch(signo){
+                    case '+':
+                        return document.write(parseInt(num1) + parseInt(num2));
+                        break;
+                    case '-':
+                        return document.write(parseInt(num1) - parseInt(num2));
+                        break;
+                    case '*':
+                        return document.write(parseInt(num1) * parseInt(num2));
+                        break;
+                    case '/':
+                        return document.write(parseInt(num1) / parseInt(num2));
+                        break;
+                }
+            }
+        </script>
+        /*<label>Primer número</label>*/
+        /*<input type="text" name="numero" id="numero1"/>*/
+        /*<label>Segundo número</label>*/
+        /*<input type="text" name="numero" id="numero2"/>*/
+        <button onclick="calculadora('+')">+</button>
+        <button onclick="calculadora('-')">-</button>
+        <button onclick="calculadora('*')">*</button>
+        <button onclick="calculadora('/')">/</button>
+    </body>
+</html>

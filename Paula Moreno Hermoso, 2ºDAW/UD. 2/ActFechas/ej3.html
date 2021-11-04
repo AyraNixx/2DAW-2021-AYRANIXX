@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ej. 3: Hospital</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!--Indicamos el tipo de lenguaje-->
+        <script language="JavaScript">
+
+            //Definimos dos variables de tipo Date
+            let fecha1 = new Date(2021, 11, 04);
+            let fecha2 = new Date(2021, 01, 29);
+            //Creamos una variable llamada diferencia donde calculamos
+            //la diferencia entre las dos fechas.
+            //Si restamos dos date, nos va a salir el resultado en 
+            //milisegundos por lo que deberemos de dividirlo por 
+            //86400000 para pasar de milisegundos a dias.
+            //Utilizamos Math.abs para que nos retorne el valor 
+            //absoluto en caso de que nos de un resultado negativo
+            //Empleamos Math.ceil para redondear para arriba el resultado
+            let diferencia = Math.ceil(Math.abs(fecha1 - fecha2)/86400000);
+
+            //Mostramos el resultado en la pagina.
+            document.write(diferencia);
+        </script>
+    </body>
+</html>

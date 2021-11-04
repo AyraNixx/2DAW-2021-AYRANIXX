@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ej. 2: Aeropuerto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!--Indicamos el tipo de lenguaje-->
+        <script language="JavaScript">
+
+            "use strict";
+            //Creamos la clase Vuelo
+            class Vuelo
+            {
+                //Constructor con los atributos de la clase Vuelo
+                constructor(codigo, hora_llegada, hora_salida)
+                {
+                    this.codigo = codigo;
+                    this.hora_llegada = hora_llegada;
+                    this.hora_salida = hora_salida;
+                }
+
+                //metodo para modificar la hora de llegada que recibe
+                //una nueva hora como parametro
+                modificarHoraLlegada(nuevaHoraLlegada)
+                {
+                    //Hacemos que la hora de llegada pase a ser 
+                    //la nueva hora de llegada
+                    this.hora_llegada = nuevaHoraLlegada;
+                    alert("Se ha modificado la hora de llegada a --> " + this.hora_llegada);
+                }
+                //metodo para modificar la hora de salida que recibe
+                //una nueva hora como parametro
+                modificarHoraSalida(nuevaHoraSalida)
+                {
+                    //Hacemos que la hora de llegada pase a ser 
+                    //la nueva hora de llegada
+                    this.hora_salida = nuevaHoraSalida;
+                    alert("Se ha modificado la hora de salida a --> " + this.hora_salida);
+                }
+
+                //Comprobamos si la hora de llegada es posterior a la de salida
+                consultarHoraLlegada()
+                {
+                    //Quitamos los puntos de las horas 
+                    let llegada = this.hora_llegada.split(":");
+                    let salida = this.hora_salida.split(":");
+
+                    //Obtenemos la hora y los minutos de la hora de llegada
+                    let hLlegada = parseInt(llegada[0]);
+                    let minllegada = parseInt(llegada[1]);
+
+                    //Obtenemos la hora y los minutos de la hora de llegada
+                    let hSalida = parseInt(salida[0]);
+                    let minSalida = parseInt(salida[1]);
+
+                    //Si la hora de llegada es mayor que la de salida
+                    //nos devuelve true
+                    if(hLlegada > hSalida){
+                        return true;
+                    //Si la hora de llegada es menor que la de salida
+                    //nos devuelve false
+                    }else if(hLlegada < hSalida){
+                        return false;
+                    //Si esta condicion tampoco se cumple,
+                    //significa que ambas horas son iguales
+                    //asi que comprobamos cual de ellas tiene
+                    //mas minutos
+                    }else{
+                        if(minllegada > minSalida){
+                            return true
+                        }else{
+                            return false;
+                        }
+                    }
+                    
+                }
+            }
+
+            //Creamos la clase Aeropuerto
+            class Aeropuerto
+           {
+                //Constructor con los atributos de la clase aeropuerto
+                constructor(nombre, ciudad, nVuelosDiarios)
+                {
+                    this.nombre = nombre;
+                    this.ciudad = ciudad;
+                    this.arrayVuelos = new Array();
+
+                    //Inicializamos los vuelos
+                    for(let i = 0; i < nVuelosDiarios; i++)
+                    {
+                        this.arrayVuelos[i] = new Vuelo(i, "12:00", "18:35");
+                    }
+                }
+
+                //modificamos la hora de llegada
+                modificarHoraLlegada(n, nuevaHoraLlegada)
+                {
+                    //Se modifica la hora de llegada del vuelo n del array de vuelos
+                    this.arrayVuelos[n].modificarHoraLlegada(nuevaHoraLlegada);
+                }
+                //modificamos la hora de salida
+                modificarHoraSalida(n, nuevaHoraSalida)
+                {
+                    //Se modifica la hora de salida del vuelo n del array de vuelos
+                    this.arrayVuelos[n].modificarHoraSalida(nuevaHoraSalida);
+                }
+
+                //Sacamos una alerta con el resultado de la comprobacion
+                //Si sale true significa que la hora de llegada es mayor,
+                //Si sale false es que es menor
+                consultarHoraLlegada(n)
+                {
+                    alert(this.arrayVuelos[n].consultarHoraLlegada());
+                }
+
+           }
+
+           function main()
+           {
+               //Creamos un objeto aeropuerto
+               let aeropuerto = new Aeropuerto("Aeropuerto Ciudad Real", "Ciudad Real", 5);
+
+               /*document.write(aeropuerto.nombre);
+               document.write("<br>");
+               document.write(aeropuerto.ciudad);
+               document.write("<br>");
+               document.write(aeropuerto.arrayVuelos[0].consultarHoraLlegada());
+               document.write("<br>");
+               document.write(aeropuerto.arrayVuelos[1].consultarHoraLlegada());
+               document.write("<br>");
+               document.write(aeropuerto.arrayVuelos[2].consultarHoraLlegada());
+               document.write("<br>");
+               document.write(aeropuerto.arrayVuelos[3].consultarHoraLlegada());
+               document.write("<br>");
+               document.write(aeropuerto.arrayVuelos[4].consultarHoraLlegada());
+               document.write("<br>");
+               aeropuerto.arrayVuelos[3].modificarHoraLlegada("02:20");
+               */
+
+                //Mostramos valores del objeto antes de su modificacion
+                document.write(Object.values(aeropuerto.arrayVuelos[3]));
+                //Llamamos al metodo consultarHoraLlegada que mira si la hora de llegada
+                //es mayor
+                aeropuerto.consultarHoraLlegada(3);
+                document.write("<br>");
+                //Modificamos la hora de salida
+                aeropuerto.modificarHoraSalida(3, "13:00");
+                //Mostramos los valores del objeto tras su modificacion
+                document.write(Object.values(aeropuerto.arrayVuelos[3]));
+                //Vemos si es mayor la hora de llegada
+                aeropuerto.consultarHoraLlegada(3);
+                document.write("<br>");
+                //Modificamos la hora de llegada
+                aeropuerto.modificarHoraLlegada(3, "14:00");
+                //Mostramos valores del objeto tras su modificacion
+                document.write(Object.values(aeropuerto.arrayVuelos[3]));
+                aeropuerto.consultarHoraLlegada(3);
+           }
+           main();
+        </script>
+    </body>
+</html>

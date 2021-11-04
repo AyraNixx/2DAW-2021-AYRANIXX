@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ej. 3: Hospital</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!--Indicamos el tipo de lenguaje-->
+        <script language="JavaScript">
+            //Definimos dos variables de tipo Date
+            //Una que va a recibir como parametros el dia, mes y año 
+            //de nacimiento y otra que no recibe nada para que asi 
+            //corresponda a la fecha actual
+            let fecha1 = new Date(1999, 04, 30);
+            let fechaActual = new Date();
+
+            //Creamos una variable llamada edad que igualaremos 
+            //a la diferencia de la fecha actual con la fecha
+            //introducida.
+            //Usamos Math.abs para sacar el valor absoluto y 
+            //Math.ceil para redondear hacia arriba
+            //Dividimos la diferencia entre 31536000000 que es 
+            //el valor obtenido de pasar un año a milisegundo.
+            //Hacemos eso porque la diferencia entre las fechas
+            //sale en milisegundos
+            let edad = Math.ceil(Math.abs(fechaActual - fecha1)/31536000000);
+
+            //Usamos el condicional para ver si edad es 
+            //mayor o igual a 18
+            if(edad >= 18)
+            {
+                document.write("Es mayor de 18 o tiene 18");
+            }else{
+                document.write("Es menor de 18");
+            }
+        </script>
+    </body>
+</html>

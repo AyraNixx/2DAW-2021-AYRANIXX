@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ej. 3: Usuario y correo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!--Indicamos el tipo de lenguaje-->
+        <script language="JavaScript">
+
+            //Creamos la clase Alumno
+            class Alumno
+           {
+
+                constructor(dni, nombre, notaMedia)
+                {
+                    this.dni = dni;
+                    this.nombre = nombre;
+                    this.notaMedia = notaMedia;
+                }
+
+               /*setValores(dni, nombre, notaMedia)
+                {
+                    this.dni = dni;
+                    this.nombre = nombre;
+                    this.notaMedia = notaMedia;
+                }*/
+
+                modificarNotaMedia(nuevaNota)
+                {
+                    this.notaMedia = nuevaNota;
+                    alert("La nota media del alumno " + this.nombre + " ha sido modificada a " + nuevaNota);
+                }
+
+               consultarNota()
+               {
+                    alert("El alumno, " + this.nombre + ", tiene una nota media de " + this.notaMedia)
+               }
+           }
+           
+            //Creamos la clase colegio
+           class Colegio
+           {
+               constructor(nombre, numeroAulas, numeroAlumnos)
+               {
+                this.nombre = nombre;
+                this.numeroAulas = numeroAulas;
+                this.arrayAlumnos = new Array();
+               
+                //INVESTIGAR COMO REALIZAR LO DEL ARRAY
+                    for(let i = 0; i < numeroAlumnos; i++)
+                    {
+                        this.arrayAlumnos[i] = new Alumno(i + " Alumno " + i, 5.0);
+                    }
+               }  
+               consultarNotamedia(n){
+                   this.arrayAlumnos[n].consultarNota();
+               }
+               cambiarNotaMedia(n, notaNueva)
+               {
+                    this.arrayAlumnos[n].cambiarNotaMedia(nuevaNota);
+               }
+
+           }  
+
+           function main()
+           {
+                let colegio = new Colegio("IES Candelaria de los Rosales", 45, 13);
+
+                document.write(colegio.nombre);
+                document.write("<br>")
+                document.write(colegio.numeroAulas);
+                document.write("<br>")
+                document.write(colegio.arrayAlumnos);
+
+                let alumno = new Alumno(2, "Pedro", 32.1);
+                document.write(alumno.nombre);
+           }
+           main();
+        </script>
+    </body>
+</html>

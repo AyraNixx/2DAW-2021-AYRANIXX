@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ej. 3: Usuario y correo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!--Indicamos el tipo de lenguaje-->
+        <script language="JavaScript">
+            /*Definimos las variables (tener en cuenta que en JS no existen tipos como en Java)*/
+            let user;
+            let email;
+            //Usamos promt para cargar por teclado
+            user = prompt("Nombre de usuario: ");
+            mail = prompt("Correo electrónico: ");
+            //Con document.write mostramos los datos en la página HTML
+            document.write("Nombre de usuario: " + user);
+            //Ponemos la etiqueta <br> de HTML para el salto de línea
+            document.write("<br>");
+            document.write("Correo electrónico: " + mail);
+        </script>
+    </body>
+</html>

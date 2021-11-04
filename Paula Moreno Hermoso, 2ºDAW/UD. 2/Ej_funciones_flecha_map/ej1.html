@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ej. 1 Funciones flecha</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script languaje = "JavaScript">
+            let num = (aleatorio) => 
+            {
+                //Devolvemos un numero aleatorio (funcion Math.random())
+                //Usamos Math.trunc para que no salgan decimales
+                return Math.trunc((Math.random() * aleatorio) + 1);
+            }
+            //Se muestra en la página el numero aleatorio obtenido
+            document.write("Número aleatorio entre 1 - 10: " + num(10));
+            document.write("<br>");
+            document.write("Número aleatorio entre 1 - 100: " + num(100));
+            document.write("<br>");
+            document.write("Número aleatorio entre 1 - 900: " + num(900));
+        </script>
+    </body>
+</html>
+
+
+
+
+
+    
