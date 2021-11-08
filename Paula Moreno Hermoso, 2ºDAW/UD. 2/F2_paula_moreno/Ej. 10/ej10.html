@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ej. 3: Hospital</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!--Indicamos el tipo de lenguaje-->
+        <script type="text/javascript" src="ej10.js"></script>
+        <form name="operaciones" action="" method="get">
+            <!--Creamos unos input por los que introduciremos los
+                valores para num1 y num2-->
+            <label for="num1">Primer número</label>
+            <br>
+            <input type="Text" name="num1" size="12"> 
+            <br>
+            <label for="num2">Segundo número</label>
+            <br>
+            <input type="Text" name="num2" size="12"> 
+            <br>
+            <!--Creamos input de tipo boton con los que elegir 
+                el tipo de operacion-->
+            <input type="button" value="*" onclick="operacion('*')"
+            style="width: 4.2em; margin-top: 1em; margin-bottom: 1em;">
+            <input type="button" value="/" onclick="operacion('/')"
+            style="width: 4.2em; margin-top: 1em; margin-bottom: 1em;">
+            <br>
+            <label for="num2">Resultado</label>
+            <br>
+            <!--Otro input que recibe el resultado-->
+            <input type="Text" name="resultado" size="12"> 
+        </form>
+        
+    </body>
+</html>
