@@ -12,4 +12,4 @@ let fechaNavidad = new Date(2021, 12, 24);
 let diferencia = Math.ceil(Math.abs(fechaActual - fechaNavidad)/86400000);
 
 //Mostramos el resultado en la pagina.
-document.write(diferencia);
+alert("Quedan " + diferencia + "días hasta Navidad");
