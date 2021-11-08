@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ej. 11: Conversion temp</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!--Indicamos el tipo de lenguaje-->
+        <script type="text/javascript" src="ej11.js"></script>
+        <!--Formulario-->
+        <form name="conversion" action="" method="get">
+            <label for="temp">Temperatura</label>
+            <br>
+            <!--Desplegable con el que indicas la unidad termométrica
+                del valor que estas introduciendo -->
+            <select name="temp" id="temp" style="width: 8.8em; margin-bottom: 1em;
+            margin-top: 0.5em;">
+                <option value="celsius">Celsius</option>
+                <option value="farenheit">Farenheit</option>
+            </select>
+            <!--Creamos unos input por los que introduciremos el valor-->
+            <br>
+            <input type="Text" name="valor" size="12"
+            style="margin-bottom: 1em;">
+            <br>
+            <!--Boton calcular para iniciar la conversion-->
+            <input type="button" value="calcular" onclick="convertir()" 
+            style="width: 8.8em; margin-bottom: 1em;">
+            <br>
+            <label for="resultado">Conversion</label>
+            <br>
+            <!--Input que recibe el resultado-->
+            <input type="Text" name="resultado" size="12"> 
+        </form>    
+    </body>
+</html>
