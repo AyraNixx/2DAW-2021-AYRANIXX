@@ -14,7 +14,7 @@ function contarPalabra(cadena, palabra)
         {
                 //Igualamos palabrasCadena al array que se obtiene
                 //al usar el metodo split en la cadena
-                palabrasCadena = cadena.split(" ");
+                palabrasCadena = cadena.split(/[ .,*+?^(){}|[\]\\]+/);
                 
                 //Creamos un condicional que dice que si en el 
                 //array palabrasCadena en la posición coincidente
