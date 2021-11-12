@@ -8,8 +8,8 @@ function contarPalabra(cadena, palabra)
         let palabrasCadena;
         let contador = 0;
 
-        //Creamos un bucle que va a durar hasta que n alcance la longitud
-        //de la cadena
+        //Creamos un bucle que va a durar hasta que n alcance el numero
+        //de palabras que tiene la cadena
         for(let n = 0; n <= cadena.split(" ").length; n++)
         {
                 //Igualamos palabrasCadena al array que se obtiene
