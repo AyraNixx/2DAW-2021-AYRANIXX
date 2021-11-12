@@ -33,4 +33,4 @@ function contarPalabra(cadena, palabra)
 let cadena = prompt("Ingrese la cadena: ");
 let palabra = prompt("Palabra a buscar: ");
 
-alert("Número de veces que aparece la palabra" + contarPalabra(cadena, palabra));
+alert("Número de veces que aparece la palabra: " + contarPalabra(cadena, palabra));
