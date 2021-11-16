@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>F5. Ej. 1</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript" src="./ej1.js"></script>
+        <!--Usamos onmousedown para indicar que mientras tengamos el raton pulsado se llamará a la 
+            se llamara a una funcion que va a cambiar la imagen por otra. Con onmouseup volvemos a la
+            imagen inical, ya que al soltar el ratón se llamara a otra funcion-->
+        <img id = "img1" src="https://i.pinimg.com/564x/40/48/8d/40488d554f0b12b6610607acc8ad3db2.jpg" alt="Perro escribiendo cartas" onmousedown="cambiarImagen()" onmouseup = "volverImagen()">
+    </body>
+</html>
