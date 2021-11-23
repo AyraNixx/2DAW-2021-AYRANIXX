@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo aprenderaprogramar.com</title>
+	<style type="text/css">
+		div{
+			width: 300px;
+			height: 300px;
+			border: solid;
+			margin: 200px;
+			background: yellow;
+			position: relative;
+		}
+	</style>
+	<script type="text/javascript">
+		
+		window.onload = function(){
+			document.onkeydown = inspeccionarTecla;
+		}
+
+		var desplazamiento = 20;
+		var desplazamientoVertical = 20;
+
+		function inspeccionarTecla(evobjet){
+			
+			var elCaracter = evobjet.keyCode;
+			if(elCaracter == 39){
+				principal.style.marginLeft = (200+desplazamiento)+"px";
+				desplazamiento = desplazamiento +20;
+			}else if(elCaracter == 37){
+				principal.style.marginLeft = (200+(desplazamiento-20))+"px";
+				desplazamiento = desplazamiento - 20;
+			}else if(elCaracter == 40){
+				principal.style.marginTop = (200+desplazamientoVertical)+"px";
+				desplazamientoVertical = desplazamientoVertical + 20;
+			}else if(elCaracter == 38){
+				//alert(desplazamientoVertical);
+				principal.style.marginTop = (200+(desplazamientoVertical-20))+"px";
+				desplazamientoVertical = desplazamientoVertical - 20;
+			}else{
+				alert('Teclee una flecha!!!');
+			}
+
+		}
+
+	</script>
+</head>
+<body>
+	<h1>Pulsa una tecla</h1>
+	<div id="principal"></div>
+</body>
+</html>
