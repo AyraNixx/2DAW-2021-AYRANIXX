@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Refranes</title>
+        <style type="text/css">
+            h1
+            {
+                text-align: center;
+                color: rgb(174, 79, 79);
+            }
+            form{text-align: center;}
+            input {margin:2px;}
+            .letras
+            {
+                width: 25px; 
+                height: 25px; 
+                background-color: lightgray; 
+                border: none; 
+                border-radius: 3px; 
+                text-align: center; 
+                margin: 5px; 
+                box-shadow: 1px 3px 2px gray;
+                color: gray;
+            }
+            #Iniciar, #Parar
+            {
+                margin-top: 20px;
+                padding: 7px;
+                border: none;
+                border-radius: 5px;
+                background: linear-gradient(90deg, #a0a0a0 0%, rgb(106, 104, 109) 100%);
+                box-shadow: 0.5px 3px rgb(70, 69, 69);
+                color: white;
+                font-family:'Trebuchet MS', 'Lucclassa Sans Unicode', 'Lucclassa Grande', 'Lucclassa Sans', Arial, sans-serif;
+                text-align: center;
+                cursor: pointer;
+            }
+            #Iniciar
+            {
+                margin-right: 40px;
+            }
+            #Parar
+            {
+                margin-left: 30px;
+            }
+            #resultado
+            {
+                margin-top: 30px;
+                width: 250px;
+                font-size: 20px;
+            }
+            .oculto { display: none; }
+            .visible { display: inline; }
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript" src="./Ej2.js"></script>
+        <h1>Adivina el siguiente refrán</h1>
+        <form name="formulario">
+            <input type="text" class="letras" value="N" >
+            <input type="text" class="letras" value="" >
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" class="letras" value="" >
+            <input type="text" class="letras" value="" >
+            <input type="text" class="letras" value="Y" >
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" class="letras" value="" >
+            <input type="text" class="letras" value="" >
+            <input type="text" class="letras" value="" >
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" class="letras" value="" >
+            <input type="text" class="letras" value="" >
+            <input type="text" class="letras" value="" >
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br>
+            <input type="text" class="letras" value="" >
+            <input type="text" class="letras" value="O" >
+            <input type="text" class="letras" value="" >
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" class="letras" value="" >
+            <input type="text" class="letras" value="" >
+            <input type="text" class="letras" value="" >
+            <input type="text" class="letras" value="" >
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" class="letras" value="" >
+            <input type="text" class="letras" value="" >
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" class="letras" value="" >
+            <input type="text" class="letras" value="" >
+            <input type="text" class="letras" value="" >
+            <input type="text" class="letras" value="G" >
+            <input type="text" class="letras" value="A" >
+            <br>
+            <input type="button" value="Iniciar" name="Iniciar" id="Iniciar" onclick="intervalo()">
+            <input type="button" value="Parar" name="Parar" id="Parar" onclick="parar()">
+            <br>
+            <input type="text" id="resultado" value="" class="oculto"> 
+        </form>
+    </body>
+</html>
