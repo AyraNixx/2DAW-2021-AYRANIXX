@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Adivina</title>
+        <link rel="stylesheet" href="Ej3.css">
+    </head>
+    <body>
+        <h1>Adivina la palabra oculta</h1>
+        <form>
+            <label for="letras">Letras</label>
+            <input type="text" id="letras" name="letras" class="letras"  readonly>
+            <br>
+            <label for="palabra">Palabra</label>
+            <input type="text" id="palabra" name="palabra" class="letras">
+            <br>
+            <input type="button" value="Nueva palabra" name="nueva" id="nueva" onclick="nuevaPalabra()">
+            <input type="button" value="Ver solución" name="solucion" id="solucion" onclick="verSolucion()" >
+            <input type="button" value="Finalizar Juego" name="fin" id="fin" onclick="finalizar()">
+            <br>
+            <p id="resultado" class="oculto"></p>
+        </form>
+        <script type="text/javascript" src="Ej3.js"></script>
+    </body>
+</html>

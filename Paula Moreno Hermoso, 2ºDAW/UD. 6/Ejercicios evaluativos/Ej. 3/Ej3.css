@@ -1,0 +1,54 @@
+h1
+{
+    text-align: center;
+    color: rgb(174, 79, 79);
+}
+
+#resultado
+{
+    color: rgb(174, 79, 79);
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+form{text-align: center;}
+
+input {margin:2px;}
+    .letras
+    {
+        width: 200px; 
+        height: 25px; 
+        border: 1px gray solid; 
+        border-radius: 3px; 
+        text-align: center; 
+        margin: 5px; 
+        color: gray;
+    }
+    label:first-child
+    {
+        margin-left: 0x;
+        padding-right: 8px;
+    }
+    input:nth-of-type(1)
+    {
+        background-color: rgb(223, 221, 221);
+        color: rgb(174, 79, 79);
+        border: none;
+        cursor:auto;
+    }
+    label:nth-of-type(2), input:nth-of-type(2)
+    {
+        margin-bottom: 20px;
+    }
+    input:nth-of-type(3), input:nth-of-type(4), input:nth-of-type(5)
+    {
+        margin: 5px;
+    }
+
+    #nueva, #solucion, #fin
+    {
+        margin-bottom: 20px;
+    }
+
+.oculto { display: none; }
+.visible { display: inline; }
