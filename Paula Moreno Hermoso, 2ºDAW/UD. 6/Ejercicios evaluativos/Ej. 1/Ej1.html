@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Formulario</title>
+        <link rel="stylesheet" href="Ej1.css">
+    </head>
+    <body>
+        <div id="contenedor">
+            <form name="miFormulario" onsubmit="return validar()">
+                <h3>&bull;&nbsp;CREAR CUENTA&nbsp;&bull;</h3>
+                <span class="alerta oculto">El campo no puede estar vacío</span>
+                <input type="text" name="nombre" id="nombre" value="NAME" onFocus="this.value=''">
+                <span class="alerta oculto">Email no válido</span>
+                <input type="text" name="email" id="email" value="E-MAIL" onFocus="this.value=''">                        
+                <br>
+                <span class="alerta oculto">Contraseña no válida. Debe de tener 8 caracteres como mínimo y contar &nbsp;&nbsp;&nbsp;con un dígito al menos</span>
+                <input type="password" name="contra" id="contra" value="PASSWORD" onFocus="this.value=''">
+                <br>
+                <span class="alerta oculto">Las contraseñas no coinciden</span>
+                <input type="password" name="contra2" id="contra2" value="PASSWORD" onFocus="this.value=''">
+                <br>
+                <label for="condiciones"><input type="checkbox" name="condiciones" id="condiciones">Acepto las condiciones</label>
+                <br>
+                <p id="operacion"></p>
+                <input type="text" name="result" id="result" value="RESULTADO" onFocus="this.value=''">
+                <br>
+                <input type="submit" value="Crear Cuenta" id="crear" class="disabled" disabled>
+            </form>
+        </div>        
+        <script type="text/javascript" src="Ej1.js"></script>
+    </body>
+</html>
