@@ -1,0 +1,22 @@
+body {
+  text-align: center;
+}
+
+body h1 {
+  color: #2fa799;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 65px;
+}
+
+body h1 span {
+  color: #8b8b8b;
+}
+
+body form input {
+  color: #2fa799;
+  padding: 12px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=ej2.css.map */
