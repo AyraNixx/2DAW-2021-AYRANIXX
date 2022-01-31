@@ -2,7 +2,7 @@
 fetch("https://pokeapi.co/api/v2/pokemon/ditto/")
     //Si el estatus de la respuesta es 200
     .then(response => {
-        if(response.status==200)
+        if(response.status===200)
         {
             //Pasamos la respuesta a formato JSON 
             response.json()
