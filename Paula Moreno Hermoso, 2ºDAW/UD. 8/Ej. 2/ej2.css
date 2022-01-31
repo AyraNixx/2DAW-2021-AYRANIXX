@@ -1,0 +1,67 @@
+body
+{
+    text-align: center;
+}
+#formulario
+{
+    width: max-content;
+    text-align: center;
+    margin: 0 auto;
+}
+form
+{
+    padding: 50px;
+    height: auto;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+#poke
+{
+    width: 450px;
+    border: 10px #32327b ridge;
+    font-size: 20px;
+}
+#buscarPoke
+{
+    margin: 10px;
+    width: 150px;
+    height: 30px;
+    font-size: 20px;
+    background:linear-gradient(to bottom, #ebab34 5%, #f1d42b 100%);
+    box-shadow: 3px 4px 0px 0px #8a2a21;
+    text-shadow:0px 1px 0px #32327b;
+    cursor: pointer;
+}
+#buscarPoke:hover {
+	background:linear-gradient(to bottom, #f1d42b 5%, #ebab34 100%);
+}
+#buscarPoke:active {
+	position:relative;
+	top:1px;
+}
+#titulo
+{
+    position: relative;
+    top: 70px;
+}
+#pokefriends
+{
+    position: relative;
+    top: 54px;
+
+}
+#imagenes
+{
+    background: #bce7df;
+    height: auto;
+    margin-bottom: 20px;
+}
+#pokeTitulo
+{
+    position: relative;
+    top: 52px;
+    color: #32327b;
+    text-align: justify;
+    font-size:40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
