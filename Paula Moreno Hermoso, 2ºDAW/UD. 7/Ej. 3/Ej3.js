@@ -1,7 +1,7 @@
 //  AL CARGAR LA PÁGINA
 window.onload = function()
 {
-    //Creamos una variable que recibe los va
+    //Creamos una variable que recibe los valores
     let visitas = localStorage.getItem("visitas");
 
     //Si visitas es nulo, lo igualamos a 0
