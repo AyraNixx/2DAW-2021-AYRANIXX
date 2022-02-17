@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Fetch API</title>
+    <link href="./estilo.css" rel="stylesheet">
+</head>
+<html>
+
+<body>
+    <div id="contenedor">
+        <form>
+            <div>
+                <h2>
+                    <img src="palomitas-de-maiz.png" alt="" class="icon">
+                    Movie.tv
+                </h2>
+            </div>
+            <br>
+            <span class="label">Titulo de la pelicula</span>
+            <input id="titulo" name="titulo" type="text" placeholder="Introduzca una pelicula"/>
+            <select id="tipo">
+                <option value="movie">Peliculas</option>
+                <option value="series">Serie</option>
+            </select> 
+            <input type="text" name="anio" id="anio" placeholder="Año de estreno">  
+            <input id="boton" type="button" value="Buscar"/>
+        </form> 
+    </div>
+    <div>
+        <table id="tabla" class="oculto">
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Tipo</th>
+                    <th>Año de estreno</th>
+                    <th>Poster</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>    
+    <!-- Incluimos las bibliotecas y el codigo-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="ej9.js"></script>
+</body>
+
+</html>

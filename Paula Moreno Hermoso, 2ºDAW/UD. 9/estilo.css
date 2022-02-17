@@ -1,0 +1,146 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(fondo.jpg) no-repeat fixed;
+    background-size: cover;
+}
+#contenedor
+{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 12%;
+    margin-left: 55%;
+}
+.icon
+{
+    display: inline-block;
+    width: 2em; height: 2em;
+    margin-right: .5em;
+}
+h2
+{
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    color: #e7a3d9;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+}
+form
+{
+    background-color: black;
+    border: 2px #e7a3d9 solid;
+    box-shadow: 11px 11px 0px 0px #ca7eba;
+    border-radius: 3px;
+    padding: 40px;
+}
+input:first-of-type
+{
+    width: 95%;
+    background-color: transparent;
+    border: 2px #ca7eba solid;
+    padding: 10px;
+    color: white;
+}
+select
+{
+    width: 47%;
+    background-color: transparent;
+    border: 2px #ca7eba solid;
+    padding: 10px;
+    color: #ca7eba;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+option
+{
+    background-color: #ca7eba;
+    color: black;
+}
+input:nth-of-type(2)
+{
+    width: 47.2%;
+    background-color: transparent;
+    border: 2px #ca7eba solid;
+    padding: 10px;
+    color: white;    
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.label
+{
+    position: relative;
+    left: 2%;
+    top: 10px;
+    background-color: black;
+    color: #ca7eba;
+}
+#boton
+{
+    color: black;
+    padding: 10px;
+    background: #ca7eba;
+    border: none;
+    border-radius: 2px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+div:last-of-type
+{
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    margin-top: 100px ;
+    border: none;
+    background-color: #d3cfcf;
+    width: 95%;
+    text-align: center;
+    border-collapse: collapse;
+  }
+  td, th {
+    border: 1px solid #d3cfcf;
+    padding: 4px 4px;
+    width: auto;
+  }
+  tbody td {
+    border: 1px black solid;
+    font-size: 13px;
+    color: #ca7eba;
+  }
+  table tr:nth-child(even) {
+    border: 1px #5c5959 solid;
+    background: #ebc7e4;
+    color: #5c5959;
+  }
+  table td:nth-child(even) {
+    border: 1px #5c5959 solid;
+    background: #ebc7e4;
+    color: #5c5959;
+  }
+  table thead {
+    background: #000000;
+    border-bottom: 1px solid #040404;
+  }
+  table thead th {
+    font-size: 19px;
+    font-weight: lighter;
+    color: #FFFFFF;
+    text-align: center;
+  }
+img
+{
+    width: 220px;
+    height: 320px;
+}
+.oculto
+{
+    display: none;
+}
+.visible
+{
+    display:inline-table;
+}
