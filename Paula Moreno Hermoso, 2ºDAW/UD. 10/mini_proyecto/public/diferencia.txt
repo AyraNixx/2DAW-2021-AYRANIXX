@@ -1,0 +1,6 @@
+La principal diferencia entre state y props es que props
+se pasa al componente (como un parámetro a una función)
+mientras que state se administra dentro.
+
+Ambos representan los valores renderizados, es decir, 
+lo que hay en la pantalla.

@@ -10,7 +10,7 @@ $(function() {
     
 });
 
-
+ 
 //Funcion para obtener los datos de la pelicula o serie a buscar
 function pelicula()
 {
