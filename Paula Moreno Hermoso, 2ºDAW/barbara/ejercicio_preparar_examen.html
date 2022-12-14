@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body onload=numeros()>
+    <!--Contenedor-->
+    <div class="p-4 m-lg-5"
+        style="color: white; width: 500px;   background-color:black; border-radius: 20px; border: solid grey ;">
+        <!--formulario-->
+        <form name="form" id="form">
+
+            <!--Nombre-->
+            <div class="mb-3">
+                <label class="form-label" for="nombre">Nombre:&nbsp;&nbsp;&nbsp;<p id="pnombre" style="color: red;"></p>
+                    </label>
+                <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre">
+            </div>
+
+            <!--Correo-->
+            <div class="mb-3">
+                <label class="form-label" for="correo">Correo:&nbsp;&nbsp;&nbsp;<p id="pcorreo" style="color: red;"></p>
+                    </label>
+                <input class="form-control" type="text" name="correo" id="correo" placeholder="Correo">
+            </div>
+            <!--ContraseÃ±a-->
+
+            <div class="mb-3">
+                <label class="form-label" for="pass">password:&nbsp;&nbsp;&nbsp;<p id="ppass" style="color: red;"></p>
+                    </label>
+                <input class="form-control" type="password" name="pass" id="pass" placeholder="password">
+            </div>
+
+
+
+            <div class="mb-3">
+                <label class="form-label" for="pass">Repita password:</label>
+                <input class="form-control" type="password" name="pass2" id="pass2" placeholder="password">
+            </div>
+
+            <!--Capcha-->
+
+
+            <div class="mb-3">
+                <label class="form-label" id="labelcapcha" for="capcha"></label>
+                <p id="pcapcha" style="color: red;"></p>
+                <input class="form-control" type="capcha" name="capcha" id="capcha">
+            </div>
+
+            <!-- CONDICIONES -->
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="condiciones"
+                    onchange="aceptaCondiciones()">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Acepto las condiciones
+                </label>
+            </div>
+
+        </form>
+    </div>
+    <script src="funcion.js"></script>
+</body>
+
+</html>
